@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="CokeOrPepsi.AzureTable"
+             Title="Recent Products">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness" iOS="0, 20, 0, 0" />
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="10">
+            <Label Text="View previous products!"
+                   FontSize="22"
+                   HorizontalOptions="Center" />
+            <Button Text="See Product Info" FontSize="30" TextColor="White" BackgroundColor="DarkGray" Clicked="Handle_ClickedAsync" />
+            <ListView x:Name="CokeOrPepsiList" 
+                      HasUnevenRows="True" 
+                      SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal" Padding="10">
+                                <Label Text="{Binding DateNZ, StringFormat='{0:MM/dd/yy, h:mm tt}'}" HorizontalOptions="FillAndExpand" Margin="20,0,0,0" VerticalTextAlignment="Center" />
+                                <Label Text="{Binding Product, StringFormat='{0:N}'}" VerticalTextAlignment="Center" Margin="0,0,20,0" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <ActivityIndicator x:Name="loading" IsRunning="false" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

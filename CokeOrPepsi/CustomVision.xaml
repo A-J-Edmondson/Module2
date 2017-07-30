@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="CokeOrPepsi.CustomVision" 
+             Title= "Take Photo" >
+    
+    <ContentPage.Content>
+        <ScrollView  Orientation = "Vertical" VerticalOptions="StartAndExpand">
+            <StackLayout Orientation="Vertical" Padding="20">
+                <Label Text="Determine your product!"
+                       FontSize="22"
+                       HorizontalOptions="Center" />
+
+                <Button Text="Take a Photo" 
+                        FontSize="30"
+                        BackgroundColor="DarkGray"
+                        TextColor="White"
+                        Clicked="TakePhotoButton_OnClicked" />
+
+                <Image x:Name="image" />
+
+                <Label x:Name="ProductLabel"
+                       FontSize="20" 
+                       TextColor="Blue"
+                       HorizontalOptions="Center" />
+
+                <Label x:Name="ResultLabel" 
+                       FontSize="40" 
+                       HorizontalOptions="Center"/>
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+    
+</ContentPage>

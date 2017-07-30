@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:CokeOrPepsi"
+    x:Class="CokeOrPepsi.MainPage" >
+
+    <ContentPage Title="Home" >
+        <StackLayout Orientation="Vertical" Padding="20,20,20,20" VerticalOptions="Center">
+            <Label Text="About:" 
+                   FontSize="30"
+                   VerticalOptions="Center" 
+                   HorizontalOptions="Center" />
+            <Label Text="Simply click the tab header 'TAKE PHOTO' and take a photo of your favourite Coca-cola or Pepsi product. The App will then determine the type of product you have!" 
+                   FontSize="14"
+                   VerticalTextAlignment="Center" 
+                   HorizontalTextAlignment="Center" />
+            <Label Text="Want to see when you had your last Pepsi product? Easy! Simply click on the tab header 'RECENT PRODUCTS' and you can see exactly when you had your last Coca-cola or Pepsi product!" 
+                   FontSize="14"
+                   VerticalTextAlignment="Center" 
+                   HorizontalTextAlignment="Center" />
+        </StackLayout>
+
+    </ContentPage>
+
+    <local:CustomVision></local:CustomVision>
+    <local:AzureTable></local:AzureTable>
+
+
+</TabbedPage>
